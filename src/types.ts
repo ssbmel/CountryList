@@ -47,12 +47,10 @@ interface Country {
   latlng : number[];
   maps : string[];
   name : {
-    [key:string]: {
       common: string;
       official: string;
       nativeName: string[];
     }
-  };
   population : number;
   postalCode: {
     [key:string]: {

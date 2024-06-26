@@ -17,6 +17,8 @@ export default function CountryList() {
   }, []);
 
   const changeHandler = (country: Country) => {
+    console.log(country);
+    
     const newList = countryList.map((list) => {
       return list.id === country.id
         ? {
@@ -38,7 +40,7 @@ export default function CountryList() {
               key={data.id}
               flag={data.flags.png}
               common={data.name.common}
-              capital={data.capital}
+              capital={data.capital?.length > 0? data.capital[0] : ""}
               onClick={() => changeHandler(data)}
             />
           ))}
@@ -51,7 +53,7 @@ export default function CountryList() {
               key={data.id}
               flag={data.flags.png}
               common={data.name.common}
-              capital={data.capital}
+              capital={data.capital?.length > 0? data.capital[0] : ""}
               onClick={() => changeHandler(data)}
             />
           ))}
