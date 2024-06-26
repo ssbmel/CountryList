@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-export default function CountryCard({ flag, common, capital, onClick }: propsType) {
+type CountryCardPropsType = {
+  flag: string;
+  common : string;
+  capital : string;
+  onClick : ()=>void;
+} 
+
+export default function CountryCard({ flag, common, capital, onClick }: CountryCardPropsType) {
   return (
     <>
         <StCountryCard onClick={onClick}>
