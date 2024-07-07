@@ -27,7 +27,7 @@ export default function CountryList() {
           }
         : {...list}
     });
-    setCountryList(newList);
+    setCountryList(newList);    
   };
   
   return (

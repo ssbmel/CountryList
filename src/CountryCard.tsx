@@ -10,11 +10,11 @@ type CountryCardPropsType = {
 export default function CountryCard({ flag, common, capital, onClick }: CountryCardPropsType) {
   return (
     <>
-        <StCountryCard onClick={onClick}>
-          <StFlag src={flag}></StFlag>
-          <StCommon>{common}</StCommon>
-          <div>{capital}</div>
-        </StCountryCard>
+      <StCountryCard onClick={onClick}>
+        <StFlag src={flag}></StFlag>
+        <StCommon>{common}</StCommon>
+        <div>{capital}</div>
+      </StCountryCard>
     </>
   );
 }
